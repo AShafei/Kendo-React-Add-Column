@@ -15,8 +15,8 @@ const ColumnForm = props => {
               <div className="mb-3">
                 <Field
                   name={"ColumnName"}
+                  type = {Date}
                   component={Input}
-                  label={"Column Name"}
                 />
               </div>
             </fieldset>
