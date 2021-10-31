@@ -44,7 +44,7 @@ class App extends React.Component {
     const columnName = str.replace(/\s+/g, "");
     this.setState({
       data: this.state.data.map(item => {
-        item[columnName] = "add value please";
+        item[columnName] = "0.0";
         return item;
       }),
       columns: [...this.state.columns, columnName],
@@ -129,6 +129,9 @@ class App extends React.Component {
 
             if (this.columnsToIgnore.includes(c)) {
               return;
+            }
+            else{
+              editor = "numeric";
             }
             if (c == "ProductID") {
               width = "40px";
